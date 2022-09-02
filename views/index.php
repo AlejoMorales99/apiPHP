@@ -16,4 +16,5 @@ if ($opciones == 'GET') {
     } else {
         echo json_encode($vista->traerUsuarios(0));
     }
+    
 }
