@@ -11,7 +11,7 @@ class bd
     public function __construct()
     {
         $this->host = "localhost";
-        $this->db = "empresapj";
+        $this->db = "bdproyecto";
         $this->user = "root";
         $this->password = "";
     }
