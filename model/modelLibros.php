@@ -97,4 +97,23 @@ class Libros extends bd
             return "error al Actualizar  en " . $e->getMessage() . "En la linea " . $e->getLine();
         }
     }
+
+    function validarLogin($data)
+    {
+
+        try {
+            $consulta = $this->conexion->prepare("SELECT * FROM `usuario` WHERE NumeroDocu = ? AND Contraseña = ?");
+            $consulta->bindParam(1, $data['user'], PDO::PARAM_STR);
+            $consulta->bindParam(2, $data['pass'], PDO::PARAM_STR);
+
+            $consulta->execute();
+
+            $data = $consulta->fetch(pdo::FETCH_ASSOC);
+
+
+            return $data;
+        } catch (PDOException $e) {
+            return "error al ingresar  en " . $e->getMessage() . "En la linea " . $e->getLine();
+        }
+    }
 }

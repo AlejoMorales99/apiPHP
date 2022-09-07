@@ -60,4 +60,13 @@ class UsuariosController
 
         return $this->userJson->editarUsuarios($this->data);
     }
+
+
+    function validarLogin($dataGET)
+    {
+
+        $this->data = $dataGET;
+
+        return $this->userJson->validarLogin($this->data);
+    }
 }
