@@ -18,7 +18,7 @@ class Libros extends bd
         if ($id == 1) {
 
             $consulta = $this->conexion->prepare("CALL PA_TRAER_UN_USUARIO(?)");
-            $consulta->bindParam(1, $id, PDO::PARAM_INT);
+            $consulta->bindParam(1, $_GET['usuarios'], PDO::PARAM_INT);
             $consulta->execute();
 
             $data = $consulta->fetchAll(PDO::FETCH_ASSOC);
