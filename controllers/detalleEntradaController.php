@@ -21,4 +21,13 @@ class detalleEntrada
             return $this->userJson->traerDetalleEntrada(1);
         }
     }
+
+
+    function insertarDetalleEntrada($data)
+    {
+
+        $this->data = $data;
+
+        return $this->userJson->insertarDetalleEntrada($this->data);
+    }
 }
