@@ -30,4 +30,12 @@ class detalleEntrada
 
         return $this->userJson->insertarDetalleEntrada($this->data);
     }
+
+    function editarDetalleEntrada($dataGET)
+    {
+
+        $this->data = $dataGET;
+
+        return $this->userJson->editarDetalleEntrada($this->data);
+    }
 }

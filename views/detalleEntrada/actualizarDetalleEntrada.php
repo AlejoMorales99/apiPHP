@@ -9,6 +9,7 @@ $data = [
     'totalDetalle' => $_GET["total"],
     'clienteID' => $_GET['clientesID'],
     'usuarioID' => $_GET['usuarioID'],
+    'idEditar' => $_GET['idEditar']
 ];
 
 
@@ -18,7 +19,7 @@ $opciones = $_SERVER['REQUEST_METHOD'];
 
 if ($opciones == 'GET') {
 
-    echo json_encode($json->insertarDetalleEntrada($data));
+    echo json_encode($json->editarDetalleEntrada($data));
     //echo json_encode($vista->insertarUsuarios());
 
 }
