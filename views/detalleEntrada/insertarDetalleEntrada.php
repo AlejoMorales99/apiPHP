@@ -9,6 +9,7 @@ $data = [
     'totalDetalle' => $_GET["total"],
     'clienteID' => $_GET['clientesID'],
     'usuarioID' => $_GET['usuarioID'],
+    'bodega' => $_GET['bodega']
 ];
 
 
