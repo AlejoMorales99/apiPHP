@@ -31,11 +31,11 @@ class entradaArticulo
         return $this->userJson->insertarArticulo($this->data);
     }
 
-    function editarDetalleEntrada($dataGET)
+    function editarEntrada($dataGET)
     {
 
         $this->data = $dataGET;
 
-        return $this->userJson->editarDetalleEntrada($this->data);
+        return $this->userJson->editarEntrada($this->data);
     }
 }
